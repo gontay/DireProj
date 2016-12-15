@@ -1,0 +1,33 @@
+package demo;
+
+import model.VolunteerDAO;
+import model.VolunteerEntity;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+
+/**
+ * Created by Gerald on 15/12/2016.
+ */
+@WebServlet(name = "VolunteerServlet",urlPatterns = "/register")
+public class VolunteerServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        String name = (String)session.getAttribute("name");
+        String password = (String)session.getAttribute("password");
+        String email = (String)session.getAttribute("email");
+        VolunteerEntity v = new VolunteerEntity();
+        VolunteerDAO volunteerDAO = new VolunteerDAO();
+        volunteerDAO.registerVolunteer(name,email,password);
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+}
