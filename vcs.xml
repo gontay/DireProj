@@ -18,6 +18,10 @@
           <option name="url" value="https://github.com/gordon0209/DireProject.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/gontay/DireWebProject" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="F:\Nanyang Polytechnic\Year 2 (April 2016 - March 2017)\Semester 2\ITP212 JAVA ENTERPRISE DEVELOPMENT &amp; PROJECT" />
